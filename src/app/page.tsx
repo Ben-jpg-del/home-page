@@ -22,7 +22,7 @@ export default function Home() {
             <div className="space-y-6">
               <div className="terminal-card">
                 <h4>Market-Relative Benchmarking</h4>
-                <p>We continuously plot each startup's KPIs against its sector ETF, the S&P 500, and peer exits in real time.</p>
+                <p>We continuously plot each startup&apos;s KPIs against its sector ETF, the S&amp;P 500, and peer exits in real time.</p>
                 <p className="highlight">Instantly see whether momentum is founder-alpha or macro tide.</p>
               </div>
 
@@ -34,14 +34,14 @@ export default function Home() {
 
               <div className="terminal-card">
                 <h4>CAGR & Competitor Delta Analysis</h4>
-                <p>We overlay a venture's historical growth curve on comparable company trajectories and flag variance beyond one standard deviation.</p>
+                <p>We overlay a venture&apos;s historical growth curve on comparable company trajectories and flag variance beyond one standard deviation.</p>
                 <p className="highlight">Spot over- (or under-) performance long before the next funding round.</p>
               </div>
 
               <div className="terminal-card">
                 <h4>Similar-Trajectory Simulation</h4>
                 <p>Monte Carlo paths are seeded with look-alike venture data from the past 20 years to expose hidden unicorn potential.</p>
-                <p className="highlight">Surfaces non-obvious "Airbnb-in-2009" moments you'd otherwise miss.</p>
+                <p className="highlight">Surfaces non-obvious &quot;Airbnb-in-2009&quot; moments you&apos;d otherwise miss.</p>
               </div>
 
               <div className="terminal-card">
