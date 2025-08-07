@@ -1,103 +1,114 @@
+import HeroFuturistic from "@/components/ui/hero-futuristic";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <main className="min-h-screen">
+      <HeroFuturistic />
+      
+      {/* ROO-AI Terminal Section */}
+      <section className="terminal-section min-h-screen p-8">
+        <div className="terminal-content max-w-6xl mx-auto">
+          <h2 className="terminal-title">About ROO-AI</h2>
+          
+          <p className="terminal-subtitle">
+            Boomerang distills millions of market signals into one quantified probability-of-success score so you can deploy capital (or sweat-equity) with conviction.
+          </p>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          <div className="mb-12">
+            <h3>Capabilities</h3>
+            
+            <div className="space-y-6">
+              <div className="terminal-card">
+                <h4>Market-Relative Benchmarking</h4>
+                <p>We continuously plot each startup's KPIs against its sector ETF, the S&P 500, and peer exits in real time.</p>
+                <p className="highlight">Instantly see whether momentum is founder-alpha or macro tide.</p>
+              </div>
+
+              <div className="terminal-card">
+                <h4>Influencer Sentiment Engine</h4>
+                <p>A neural net ingests commentary from the 10 most influential voices in every vertical, normalizes tone, and corrects for hype bias.</p>
+                <p className="highlight">Cuts through noise—only sentiment with proven market-moving power reaches your dashboard.</p>
+              </div>
+
+              <div className="terminal-card">
+                <h4>CAGR & Competitor Delta Analysis</h4>
+                <p>We overlay a venture's historical growth curve on comparable company trajectories and flag variance beyond one standard deviation.</p>
+                <p className="highlight">Spot over- (or under-) performance long before the next funding round.</p>
+              </div>
+
+              <div className="terminal-card">
+                <h4>Similar-Trajectory Simulation</h4>
+                <p>Monte Carlo paths are seeded with look-alike venture data from the past 20 years to expose hidden unicorn potential.</p>
+                <p className="highlight">Surfaces non-obvious "Airbnb-in-2009" moments you'd otherwise miss.</p>
+              </div>
+
+              <div className="terminal-card">
+                <h4>Unified ROO Score</h4>
+                <p>Bayesian ensemble forecasting fuses every signal—market, team, tech readiness—into a single 0-100 probability updated daily.</p>
+                <p className="highlight">One metric to rank, compare, and track thousands of deals at a glance.</p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h3>Inside the ROO-AI Engine</h3>
+            
+            <div className="terminal-grid">
+              <div className="terminal-card">
+                <h4>Probabilistic Pattern Recognition</h4>
+                <p>Neural networks detect micro-behaviours (code-repo velocity, hiring cadence, product-hunt chatter) invisible to classic DD.</p>
+              </div>
+
+              <div className="terminal-card">
+                <h4>Alpha-Signal Extraction</h4>
+                <p>Our pipeline de-correlates overlapping data streams to isolate true predictive factors, not vanity metrics.</p>
+              </div>
+
+              <div className="terminal-card">
+                <h4>Bayesian Ensemble Forecasting</h4>
+                <p>Multiple base-learners (gradient-boosted trees, temporal GNNs, causal impact models) vote on outcome likelihood; posteriors are recalibrated with every new data point.</p>
+              </div>
+
+              <div className="terminal-card">
+                <h4>Monte Carlo Scenario Lab</h4>
+                <p>10 000+ stress tests per startup model interest-rate shocks, funding-winter droughts, supply-chain crunches, and black-swan virality.</p>
+              </div>
+
+              <div className="terminal-card" style={{ gridColumn: 'span 2' }}>
+                <h4>Explainability Layer</h4>
+                <p>Every score ships with a Shapley-value heat map so investors and founders see which levers move the needle.</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Access ROO-AI Button */}
+          <div className="mt-12 text-center">
+            <Link href="/access">
+              <button className="access-roo-btn">
+                Access ROO-AI
+              </button>
+            </Link>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+      </section>
+
+      {/* Dotted Gradient Transition */}
+      <section className="dotted-gradient h-screen-1-5"></section>
+
+      {/* White Margin Section with Logo */}
+      <section className="bg-white h-screen-1-5 relative">
+        <div className="absolute bottom-4 right-4">
           <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+            src="/IMG_0917.jpg"
+            alt="ROO Logo"
+            width={120}
+            height={120}
+            className="rounded-lg shadow-lg"
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        </div>
+      </section>
+    </main>
   );
 }
